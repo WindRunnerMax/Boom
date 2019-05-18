@@ -12,6 +12,7 @@ import time
 
 ########################################
 phone = ""
+########################################
 # 短信接口API 请求间隔时间 备注 请求方式 请求参数 需要SESSION的先决请求URL以及Referer
 APIList = [
 ["https://login.ceconline.com/thirdPartLogin.do",60,"世界经理人","POST",{"mobileNumber":phone,"method": "getDynamicCode","verifyType": "MOBILE_NUM_REG","captcharType":"","time": str(int(time.time()*1000))},""],
@@ -34,8 +35,9 @@ APIList = [
 
 ["https://www.decathlon.com.cn/zh/ajax/rest/model/atg/userprofiling/ProfileActor/send-mobile-verification-code",30,"迪卡侬","POST",{"countryCode":"CN","mobile":phone},"https://www.decathlon.com.cn/zh/create"],
 
-["http://cta613.org/sendsms.php",60,"支教","POST",{"y":"1","sj":phone},""]
+["http://cta613.org/sendsms.php",60,"支教","POST",{"y":"1","sj":phone},""],
 
+["http://sns.qnzs.youth.cn/ajax/passportSendSms",120,"青年之声","POST",{"mobile":phone},"http://sns.qnzs.youth.cn/user/passport"]
 
 ]
 ########################################
